@@ -32,13 +32,14 @@ namespace VSIXAvroCustomTool
       gen.GenerateCode();
       var outputTypes = gen.GetTypes();
 
-      if (!outputTypes.TryGetValue(schema.Name, out var outputType))
-      {
-        //pGenerateProgress.GeneratorError();
+      if (outputTypes.Count == 0)
         return -2;
-      }
 
-      var outputBytes = Encoding.UTF8.GetBytes(outputType);
+      var stringOut = string.Empty;
+      foreach (var outputType in outputTypes)
+        stringOut += outputType.Value + '\n';
+
+      var outputBytes = Encoding.UTF8.GetBytes(stringOut);
       pcbOutput = (uint)outputBytes.Length;
       rgbOutputFileContents[0] = Marshal.AllocCoTaskMem(outputBytes.Length);
       Marshal.Copy(outputBytes, 0, rgbOutputFileContents[0], outputBytes.Length);
