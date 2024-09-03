@@ -31,4 +31,5 @@ This tool creates a single .cs file for each avsc, and not a folder structure (p
 }
 ```
 3. Select properties on the file and type `AvroSchemaGenerator` in the field  `Custom Tool`
-4. Done
+4. The geneartor will now generate CSharp file containing all types from the schema. If you want it to generate only one class from the file and use namespace references on others, use the generator called `AvroSchemaGeneratorSingle`
+5. Done

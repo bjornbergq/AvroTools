@@ -27,6 +27,7 @@ namespace VSIXProject1
   /// </remarks>
   [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
   [ProvideCodeGenerator(typeof(AvroSchemaGenerator), nameof(AvroSchemaGenerator), "AvroSchemaGenerator", true)]
+  [ProvideCodeGenerator(typeof(AvroSchemaGeneratorSingle), nameof(AvroSchemaGeneratorSingle), "AvroSchemaGeneratorSingle", true)]
   [Guid(AvroToolsPackage.PackageGuidString)]
   public sealed class AvroToolsPackage : AsyncPackage
   {

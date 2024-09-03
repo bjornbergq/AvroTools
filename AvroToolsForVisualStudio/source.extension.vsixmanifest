@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" ?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="AvroTools.e964c747-c790-4369-9624-d83325dda7d9" Version="1.0" Language="en-US" Publisher="Björn Bergqvist" />
+        <Identity Id="AvroTools.e964c747-c790-4369-9624-d83325dda7d9" Version="1.1" Language="en-US" Publisher="Björn Bergqvist" />
         <DisplayName>AvroTools</DisplayName>
         <Description xml:space="preserve">A tool to help generate CSharp classes from Avro schema files (avsc). This tool creates a single .cs file for each avsc.</Description>
         <MoreInfo>https://github.com/bjornbergq/AvroTools/tree/main/AvroToolsForVisualStudio</MoreInfo>
